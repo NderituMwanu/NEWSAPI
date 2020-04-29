@@ -1,0 +1,31 @@
+
+{% macro displaySourcesList(sources_list) %}
+	{% for source in sources_list %}
+	<a href="/source/{{source.id}}">				
+					<p>{{source.name}}</p>
+		</div>
+	</a>
+	{% endfor %}
+{% endmacro %}
+
+{% macro displayArticlesList(articles_list) %}
+    {% for article in articles_list %}
+    
+				<div class="row" >
+					<div class="col-md-3">
+						
+					</div>
+					<div class="col-md-9">
+						<a target="_blank" href="{{article.url}}">
+							<h4 style="font-weight: 700">{{article.title}}</h4>
+						</a>
+						<p><small style="font-style: italic;">written by {{article.author}} on {{article.date}}</small></p>
+						<p>{{article.description | truncate(135)}}</p>
+						<a target="_blank" href="{{article.url}}">
+							<button class="btn btn-outline-warning" style="color: #e4630d">Finf More here</button>
+						</a>
+					</div>
+				</div>
+		</div>
+	{% endfor %}
+{% endmacro %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/static/index.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyNews </title>
+</head>
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target=".navbar-collapse">
+                VIEW SOURCES
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+
+
+    <body>
+
+        <h1> Welcome to MyNews</h1>
+
+
+
+        <form action='/results/' method="POST">
+            <input type="text" placeholder="Enter a search term" name='keyword'>
+            <button type="submit" class="btn btn-outline-warning">Get News</button>
+        </form>
+
+
+
+        {% for post in news %}
+        <img src=" {{post['urlToImage']}} ">
+        <h2>{{post['title']}}</h2>
+        <i>Published On:{{post['publishedAt']}}</i>
+        <p>Description: {{post['description']}}</p>
+        <a href="{{post['url']}}">View More from this Source</a>
+        {% endfor %}
+
+
+
+    </body>
+</div>
+
+<marquee width="100%" direction="right" height="100px">
+    <strong><i> ~ Welcome to MyNews, where you can search for various trending news and news sources ~ </i></strong>
+</marquee>
+
+</html>
