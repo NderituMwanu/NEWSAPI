@@ -6,7 +6,7 @@ from request import get_sources, get_articles
 @app.route('/')
 def index():
     '''
-    View root page function that returns the index page and its data
+    Returns data on index.html
     '''
 
     sources = get_sources()
@@ -15,5 +15,9 @@ def index():
 
 @app.route('/articles/<source_id>')
 def articles(source_id):
+    '''
+    gets the articles
+    '''
+    
     articles = get_articles(source_id)
     return render_template('article.html', articles=articles)
