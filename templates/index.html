@@ -41,7 +41,7 @@
         {% for post in news %}
         <img src=" {{post['urlToImage']}} ">
         <h2>{{post['title']}}</h2>
-        <i>Published On:{{post['publishedAt']}}</i>
+        <i>Published On: {{post['publishedAt']}}</i>
         <p>Description: {{post['description']}}</p>
         <a href="{{post['url']}}">View More from this Source</a>
         {% endfor %}
