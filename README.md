@@ -61,5 +61,3 @@ You require:
 
 5. CSS
 
-## LICENSE
-
