@@ -1,0 +1,6 @@
+export API_KEY=e35e468d3c6b4178a34ed70d92f68356
+export SECRET_KEY=e35e468d3c6b4178a34ed70d92f68356
+export FLASK_ENV=development
+
+
+python3.8 manage.py server

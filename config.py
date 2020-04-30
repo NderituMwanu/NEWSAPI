@@ -4,8 +4,8 @@ class Config:
     '''
     Parent class for general configuration
     '''
-    SOURCES_BASE_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
-   	ARTICLES_BASE_URL = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
+    SOURCES_BASE_URL='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+    ARTICLES_BASE_URL='https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
 
 class ProdConfig(Config):
     '''
